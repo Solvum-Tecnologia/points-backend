@@ -9,10 +9,10 @@ import {
 
 const router = express.Router();
 
-router.post("/", createUsuario); // Criar usuário
-router.get("/", getUsuarios); // Listar todos os usuários
-router.get("/:id", getUsuarioById); // Buscar usuário por ID
-router.put("/:id", updateUsuario); // Atualizar usuário por ID
-router.delete("/:id", deleteUsuario); // Deletar usuário por ID
+router.post("/usuario", createUsuario); // Criar usuário
+router.get("/usuarios", getUsuarios); // Listar todos os usuários
+router.get("/usuario/:id", getUsuarioById); // Buscar usuário por ID
+router.put("/usuario/:id", updateUsuario); // Atualizar usuário por ID
+router.delete("/usuario/:id", deleteUsuario); // Deletar usuário por ID
 
 export default router;
