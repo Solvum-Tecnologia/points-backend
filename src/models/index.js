@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 import Usuario from "./usuario.js";
 import Avaliacao from "./avaliacao.js";
+import ClassificacaoEtaria from "./classificacaoEtaria.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -18,6 +19,7 @@ const sequelize = new Sequelize(
 const models = {
   Usuario: Usuario.init(sequelize),
   Avaliacao: Avaliacao.init(sequelize),
+  ClassificacaoEtaria: ClassificacaoEtaria.init(sequelize),
 };
 
 Object.values(models).forEach((model) => {

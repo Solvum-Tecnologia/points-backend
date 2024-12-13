@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 
-export default class Avaliacao extends Model {
+export default class ClassificacaoEtaria extends Model {
   static init(sequelize) {
     return super.init(
       {
@@ -16,8 +16,8 @@ export default class Avaliacao extends Model {
         }},
       {
         sequelize,
-        modelName: "Avaliacao",
-        tableName: "avaliacao", // Nome da tabela no banco de dados
+        modelName: "ClassificacaoEtaria",
+        tableName: "classificacao_etaria", // Nome da tabela no banco de dados
         timestamps: true, // Cria colunas `createdAt` e `updatedAt`
       }
     );
