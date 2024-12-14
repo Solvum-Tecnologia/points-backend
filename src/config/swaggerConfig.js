@@ -12,8 +12,9 @@ const options = {
   },
   apis: [
     "src/docs/usuarios/*.js", // Caminho para os arquivos de documentação de usuários
-    "src/docs/avaliacoes/*.js", // Caminho para os arquivos de documentação de avaliações
-    "src/docs/classificacao/*.js" // Caminho para os arquivos de documentação de classificação
+    "src/docs/avaliacoes/*.js", 
+    "src/docs/classificacao/*.js", 
+    "src/docs/distancia/*.js" 
   ], // Caminho para os arquivos de rotas onde estão as anotações do Swagger
 };
 
