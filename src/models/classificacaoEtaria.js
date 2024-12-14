@@ -10,8 +10,8 @@ export default class ClassificacaoEtaria extends Model {
           autoIncrement: true,
           allowNull: false,
         },
-        valor: {
-          type: DataTypes.INTEGER,
+        classificacao: {
+          type: DataTypes.STRING,
           allowNull: false,
         }},
       {
