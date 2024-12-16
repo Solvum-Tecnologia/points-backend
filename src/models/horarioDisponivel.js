@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 
-export default class ClassificacaoEtaria extends Model {
+export default class HorarioDisponivel extends Model {
   static init(sequelize) {
     return super.init(
       {
@@ -10,14 +10,14 @@ export default class ClassificacaoEtaria extends Model {
           autoIncrement: true,
           allowNull: false,
         },
-        classificacao: {
+        turno: {
           type: DataTypes.STRING,
-          allowNull: false,
+          allowNull: true,
         }},
       {
         sequelize,
-        modelName: "ClassificacaoEtaria",
-        tableName: "classificacaoEtaria", // Nome da tabela no banco de dados
+        modelName: "HorarioDisponivel",
+        tableName: "horarioDisponivel", // Nome da tabela no banco de dados
         timestamps: true, // Cria colunas `createdAt` e `updatedAt`
       }
     );
