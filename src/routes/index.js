@@ -1,12 +1,13 @@
 import express from "express";
 import usuarioRoutes from "./usuarioRoutes.js"; // Importar as rotas de usuário
-import avaliacaoRoutes from "./avaliacaoRoutes.js"
-import classificacaoRoutes from "./classificacaoEtariaRoutes.js"
-import distanciaDoCentro from "./distanciaDoCentroRoutes.js"
+import avaliacaoRoutes from "./avaliacaoRoutes.js";
+import classificacaoRoutes from "./classificacaoEtariaRoutes.js";
+import distanciaDoCentro from "./distanciaDoCentroRoutes.js";
+import enderecos from "./enderecoRoutes.js";
 
 // Configurando Swagger.
 import swaggerUi from "swagger-ui-express";
-import {swaggerSpec} from "../config/swaggerConfig.js"// Importa a configuração do Swagger
+import { swaggerSpec } from "../config/swaggerConfig.js"; // Importa a configuração do Swagger
 
 const prefixProjeto = "/points";
 
@@ -15,12 +16,17 @@ const routers = (app) => {
     res.status(200).send({ message: "OK" });
   });
 
-  app.use(`${prefixProjeto}/docs`, swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  app.use(
+    `${prefixProjeto}/docs`,
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerSpec)
+  );
 
   app.use(prefixProjeto, express.json(), usuarioRoutes);
   app.use(prefixProjeto, express.json(), avaliacaoRoutes);
   app.use(prefixProjeto, express.json(), classificacaoRoutes);
   app.use(prefixProjeto, express.json(), distanciaDoCentro);
+  app.use(prefixProjeto, express.json(), enderecos);
 };
 
 export default routers;

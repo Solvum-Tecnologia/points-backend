@@ -14,7 +14,8 @@ const options = {
     "src/docs/usuarios/*.js", // Caminho para os arquivos de documentação de usuários
     "src/docs/avaliacoes/*.js", 
     "src/docs/classificacao/*.js", 
-    "src/docs/distancia/*.js" 
+    "src/docs/distancia/*.js",
+    "src/docs/enderecos/*.js",
   ], // Caminho para os arquivos de rotas onde estão as anotações do Swagger
 };
 

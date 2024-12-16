@@ -3,6 +3,7 @@ import Usuario from "./usuario.js";
 import Avaliacao from "./avaliacao.js";
 import ClassificacaoEtaria from "./classificacaoEtaria.js";
 import DistanciaDoCentro from "./distanciaDoCentro.js";
+import Enderecos from "./endereco.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -21,8 +22,8 @@ const models = {
   Usuario: Usuario.init(sequelize),
   Avaliacao: Avaliacao.init(sequelize),
   ClassificacaoEtaria: ClassificacaoEtaria.init(sequelize),
-  DistanciaDoCentro: DistanciaDoCentro.init(sequelize)
-
+  DistanciaDoCentro: DistanciaDoCentro.init(sequelize),
+  Enderecos: Enderecos.init(sequelize),
 };
 
 Object.values(models).forEach((model) => {
