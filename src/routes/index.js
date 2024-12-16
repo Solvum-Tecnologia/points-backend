@@ -7,6 +7,7 @@ import enderecos from "./enderecoRoutes.js";
 import estacionamento from "./estacionametoRoutes.js";
 import horarioDisponivel from "./horarioDisponivelRoutes.js";
 import idiomaFalado from "./idiomaFaladoRoutes.js";
+import pagamento from "./pagamentoRoutes.js";
 
 // Configurando Swagger.
 import swaggerUi from "swagger-ui-express";
@@ -33,6 +34,7 @@ const routers = (app) => {
   app.use(prefixProjeto, express.json(), estacionamento);
   app.use(prefixProjeto, express.json(), horarioDisponivel);
   app.use(prefixProjeto, express.json(), idiomaFalado);
+  app.use(prefixProjeto, express.json(), pagamento);
 };
 
 export default routers;

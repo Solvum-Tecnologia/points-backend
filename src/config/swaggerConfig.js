@@ -19,6 +19,7 @@ const options = {
     "src/docs/estacionamento/*.js",
     "src/docs/horario/*.js",
     "src/docs/idiomas/*.js",
+    "src/docs/pagamento/*.js",
   ], // Caminho para os arquivos de rotas onde estão as anotações do Swagger
 };
 
