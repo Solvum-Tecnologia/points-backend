@@ -1,16 +1,16 @@
 /**
  * @swagger
  * tags:
- *   name: Horário Disponível
- *   description: Gerenciamento de horários disponíveis
+ *   name: Idioma Falado
+ *   description: Gerenciamento de idiomas falados
  */
 
 /**
  * @swagger
- * /points/horario:
+ * /points/idioma:
  *   post:
- *     summary: Cria um novo horário disponível
- *     tags: [Horário Disponível]
+ *     summary: Cria um novo idioma falado
+ *     tags: [Idioma Falado]
  *     requestBody:
  *       required: true
  *       content:
@@ -18,25 +18,25 @@
  *           schema:
  *             type: object
  *             properties:
- *               turno:
+ *               idioma:
  *                 type: string
- *                 example: "Matutino"
+ *                 example: "Português"
  *     responses:
  *       201:
- *         description: Horário disponível criado com sucesso
+ *         description: Idioma falado criado com sucesso
  *       400:
  *         description: Erro na requisição
  */
 
 /**
  * @swagger
- * /points/horarios:
+ * /points/idiomas:
  *   get:
- *     summary: Lista todos os horários disponíveis
- *     tags: [Horário Disponível]
+ *     summary: Lista todos os idiomas falados
+ *     tags: [Idioma Falado]
  *     responses:
  *       200:
- *         description: Lista de horários disponíveis retornada com sucesso
+ *         description: Lista de idiomas falados retornada com sucesso
  *         content:
  *           application/json:
  *             schema:
@@ -47,9 +47,9 @@
  *                   id:
  *                     type: integer
  *                     example: 1
- *                   turno:
+ *                   idioma:
  *                     type: string
- *                     example: "Matutino"
+ *                     example: "Português"
  *                   createdAt:
  *                     type: string
  *                     format: date-time
@@ -62,20 +62,20 @@
 
 /**
  * @swagger
- * /points/horario/{id}:
+ * /points/idioma/{id}:
  *   get:
- *     summary: Busca um horário disponível pelo ID
- *     tags: [Horário Disponível]
+ *     summary: Busca um idioma falado pelo ID
+ *     tags: [Idioma Falado]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID do horário disponível
+ *         description: ID do idioma falado
  *     responses:
  *       200:
- *         description: Horário disponível encontrado
+ *         description: Idioma falado encontrado
  *         content:
  *           application/json:
  *             schema:
@@ -84,9 +84,9 @@
  *                 id:
  *                   type: integer
  *                   example: 1
- *                 turno:
+ *                 idioma:
  *                   type: string
- *                   example: "Matutino"
+ *                   example: "Português"
  *                 createdAt:
  *                   type: string
  *                   format: date-time
@@ -96,22 +96,22 @@
  *                   format: date-time
  *                   example: "2024-12-14T12:00:00.000Z"
  *       404:
- *         description: Horário disponível não encontrado
+ *         description: Idioma falado não encontrado
  */
 
 /**
  * @swagger
- * /points/horario/{id}:
+ * /points/idioma/{id}:
  *   put:
- *     summary: Atualiza os dados de um horário disponível pelo ID
- *     tags: [Horário Disponível]
+ *     summary: Atualiza os dados de um idioma falado pelo ID
+ *     tags: [Idioma Falado]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID do horário disponível
+ *         description: ID do idioma falado
  *     requestBody:
  *       required: true
  *       content:
@@ -119,34 +119,34 @@
  *           schema:
  *             type: object
  *             properties:
- *               turno:
+ *               idioma:
  *                 type: string
- *                 example: "Vespertino"
+ *                 example: "Inglês"
  *     responses:
  *       200:
- *         description: Horário disponível atualizado com sucesso
+ *         description: Idioma falado atualizado com sucesso
  *       400:
  *         description: Erro na requisição
  *       404:
- *         description: Horário disponível não encontrado
+ *         description: Idioma falado não encontrado
  */
 
 /**
  * @swagger
- * /points/horario/{id}:
+ * /points/idioma/{id}:
  *   delete:
- *     summary: Exclui um horário disponível pelo ID
- *     tags: [Horário Disponível]
+ *     summary: Exclui um idioma falado pelo ID
+ *     tags: [Idioma Falado]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID do horário disponível
+ *         description: ID do idioma falado
  *     responses:
  *       200:
- *         description: Horário disponível excluído com sucesso
+ *         description: Idioma falado excluído com sucesso
  *       404:
- *         description: Horário disponível não encontrado
+ *         description: Idioma falado não encontrado
  */

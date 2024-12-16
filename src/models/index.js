@@ -6,6 +6,7 @@ import DistanciaDoCentro from "./distanciaDoCentro.js";
 import Enderecos from "./endereco.js";
 import Estacionamento from "./estacionamento.js";
 import HorarioDisponivel from "./horarioDisponivel.js";
+import IdiomaFalado from "./idiomafalado.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -28,6 +29,7 @@ const models = {
   Enderecos: Enderecos.init(sequelize),
   Estacionamento: Estacionamento.init(sequelize),
   HorarioDisponivel: HorarioDisponivel.init(sequelize),
+  IdiomaFalado: IdiomaFalado.init(sequelize),
 };
 
 Object.values(models).forEach((model) => {
