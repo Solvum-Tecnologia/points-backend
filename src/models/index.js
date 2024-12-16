@@ -4,6 +4,7 @@ import Avaliacao from "./avaliacao.js";
 import ClassificacaoEtaria from "./classificacaoEtaria.js";
 import DistanciaDoCentro from "./distanciaDoCentro.js";
 import Enderecos from "./endereco.js";
+import Estacionamento from "./estacionamento.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -24,6 +25,7 @@ const models = {
   ClassificacaoEtaria: ClassificacaoEtaria.init(sequelize),
   DistanciaDoCentro: DistanciaDoCentro.init(sequelize),
   Enderecos: Enderecos.init(sequelize),
+  Estacionamento: Estacionamento.init(sequelize),
 };
 
 Object.values(models).forEach((model) => {
