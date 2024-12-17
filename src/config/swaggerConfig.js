@@ -23,6 +23,7 @@ const options = {
     "src/docs/comodidade/*.js",
     "src/docs/reserva/*.js",
     "src/docs/tipoDeAmbiente/*.js",
+    "src/docs/cozinha/*.js",
   ], // Caminho para os arquivos de rotas onde estão as anotações do Swagger
 };
 

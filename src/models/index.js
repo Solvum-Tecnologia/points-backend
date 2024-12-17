@@ -11,6 +11,7 @@ import Pagamento from "./pagamento.js";
 import PorComodidade from "./porComodidade.js";
 import Reserva from "./reserva.js";
 import TipoDeAmbiente from "./tipoDeAmbiente.js";
+import TipoDeCozinha from "./tipoDeCozinha.js";
 
 // Importando as varíáveis de ambiente
 import dotenv from "dotenv";
@@ -40,6 +41,7 @@ const models = {
   PorComodidade: PorComodidade.init(sequelize),
   Reserva: Reserva.init(sequelize),
   TipoDeAmbiente: TipoDeAmbiente.init(sequelize),
+  TipoDeCozinha: TipoDeCozinha.init(sequelize)
 };
 
 Object.values(models).forEach((model) => {
