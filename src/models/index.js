@@ -8,6 +8,7 @@ import Estacionamento from "./estacionamento.js";
 import HorarioDisponivel from "./horarioDisponivel.js";
 import IdiomaFalado from "./idiomafalado.js";
 import Pagamento from "./pagamento.js";
+import PorComodidade from "./porComodidade.js";
 
 // Importando as varíáveis de ambiente
 import dotenv from "dotenv";
@@ -34,6 +35,7 @@ const models = {
   HorarioDisponivel: HorarioDisponivel.init(sequelize),
   IdiomaFalado: IdiomaFalado.init(sequelize),
   Pagamento: Pagamento.init(sequelize),
+  PorComodidade: PorComodidade.init(sequelize),
 };
 
 Object.values(models).forEach((model) => {
