@@ -13,6 +13,7 @@ import reserva from "./reservaRoutes.js";
 import tipoDeAmbiente from "./tipoDeAmbienteRoutes.js";
 import tipoDeCozinha from "./tipoDeCozinhaRoutes.js";
 import tipoDeMusica from "./tipoDeMusicaRoutes.js";
+import estabelecimento from "./estabelecimentoRoutes.js";
 
 // Configurando Swagger.
 import swaggerUi from "swagger-ui-express";
@@ -45,6 +46,7 @@ const routers = (app) => {
   app.use(prefixProjeto, express.json(), tipoDeAmbiente);
   app.use(prefixProjeto, express.json(), tipoDeCozinha);
   app.use(prefixProjeto, express.json(), tipoDeMusica);
+  app.use(prefixProjeto, express.json(), estabelecimento);
 };
 
 export default routers;
